@@ -1,0 +1,293 @@
+/*!
+ * Appsmav Wordpress Plugin Dashboard by Appsmav
+ * Responsive -  Upto 768px in `em` method
+ * Global Font - `Muli`, Title Font - `colusregular`
+ */
+
+ /* GS1 - Common Resets */
+ body {
+  margin: 0;
+  line-height: 1.34;
+  word-wrap: break-word;
+}
+html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+* {-webkit-box-sizing: border-box;box-sizing: border-box;}
+*:focus {outline: 0 none;-webkit-tap-highlight-color: transparent;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,audio,canvas,progress,video,iframe{display:block}
+p {margin: 0 0 1em;}
+
+
+/* GS2 - Font Family Setup */
+@font-face {
+  font-family: 'colusregular';
+  src: url('../fonts/colus-regular-webfont.woff2') format('woff2'), url('../fonts/colus-regular-webfont.woff') format('woff');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('muli-regular-webfont.woff2') format('woff2'), url('muli-regular-webfont.woff') format('woff');
+  font-weight: normal; font-style: normal;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('muli-bold-webfont.woff2') format('woff2'), url('muli-bold-webfont.woff') format('woff');
+  font-weight: bold; font-style: normal;
+}
+body {font-family: 'Muli', sans-serif;}
+h1, h2, .pgsGrid strong {font-family: 'colusregular';}
+
+
+/* GS3 - Color Themes Setup */
+.pgsContainer {background: #f6f6f6;}
+.pgsContainer h1 {color: #8ac53b;}
+.pgsTitle, .pgsGrid, .pgsHelp {background: #fff;}
+p { color: #999; }
+a {color: #4089d6;}
+a:hover {color: #7cbcff;}
+.btn { background: #4089d6; color: #fff; }
+.btn:hover { background: #2d7dd2; color: #fff; }
+footer {background: #d1d9db;}
+.pgsGrid {border-color: #4089d6;}
+.pgsQuickLinks .pgsGrid {border-color: #8ac53b;}
+.pgsQuickLinks .pgsGrid:nth-child(n+5) {border-color: #c53bc5;}
+
+
+/* GS4 - Global Font Size Setup */
+.pgsContainer {font-size: 20px;}
+@media only screen and (max-width:1380px) { .pgsContainer { font-size: 18px; } }
+@media only screen and (max-width:1100px) { .pgsContainer { font-size: 16px; } }
+@media only screen and (max-width:900px) { .pgsContainer { font-size: 14px; } }
+
+
+/* Helper Classes */
+.pull-left {float: left;}
+.pull-right {float: right;}
+.clearfix:after {content:''; display: table; clear: both;}
+.text-center {text-align: center;}
+
+
+/* Links and Buttons */
+a {cursor: pointer; text-decoration: none; transition: .25s; position: relative;}
+a:after {content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; border-bottom: 1px solid; transition: .25s; }
+a:hover:after {transform: translateY(2px)}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: .8em 1.6em;
+}
+.btn:after {border-bottom: 5px solid #1061b7;transform: scaleY(0);}
+.btn i {margin-right: .2em;}
+.btn:hover { transform: translateY(-3px); }
+.btn:hover:after { transform: scaleY(1); }
+.btn:active { transform: translateY(2px); }
+.btn:active:after { transform: scaleY(1); }
+
+
+/* .pgsContainer Common Setup */
+.pgsContainer {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin: 4px;
+}
+.pgsContainer h2 {
+  margin: 0 0 0.7em;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+.pgsWrapper {
+  width: 93%;
+  margin: 0 auto 3.5em;
+}
+
+
+/* .pgsContainer Logo */
+.pgsContainer h1 {
+  margin: 0;
+  padding: 1em 0 1.1em;
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: normal;
+}
+.pgsContainer h1 img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.1em;
+  position: relative;
+  top: -.05em;
+  margin-right: .25em;
+}
+.pgsContainer h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* .pgsTitle Styles */
+.pgsTitle, .pgsHelp {
+  box-shadow: 0 0 20px rgba(96, 163, 234, 0.2);
+  padding: 2.4em 2.4em 1.7em;
+}
+.pgsTitle h3, .pgsHelp h3 {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0 0 .7em;
+}
+.pgsTitle .pull-left { width: 72%; }
+.pgsTitle .pull-right { width: 25%; padding-top: 1.4em; }
+
+
+/* .pgsGridList Styles */
+.pgsGridList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -0.5%;
+}
+.pgsGrid {
+  border-top-width: 3px;
+  border-top-style: solid;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  margin: 0.5%;
+  padding: 1.75em 1em;
+  width: 24%;
+}
+.pgsGrid cite {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.pgsGrid strong {
+  display: block;
+  font-size: 3.2em;
+  font-weight: normal;
+}
+
+
+/* .pgsQuickLinks Styles */
+.pgsQuickLinks {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.pgsQuickLinks .pgsGrid {
+  padding-top: 2.25em;
+  position: relative;
+  overflow: hidden;
+  transition: .25s;
+}
+.pgsQuickLinks .pgsGrid:hover {
+  box-shadow: 0 0 30px rgba(0,0,0, 0.15);
+}
+.pgsQuickLinks h3 {
+  font-size: 1.05em;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+  position: relative;
+  z-index: 2;
+}
+.pgsQuickLinks p {
+  position: relative;
+  z-index: 2;
+}
+.pgsIconGo {
+  background: url(../img/pgs-link-next.png) center center no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 2;
+}
+.pgsGrid:hover .pgsIconGo {
+  -webkit-animation: arrowMoving 1.2s linear 20;
+  animation: arrowMoving 1.2s linear 20;
+}
+.pgsQuickLinks .pgsGrid .fa {
+  position: absolute;
+  font-size: 10em;
+  opacity: .05;
+  bottom: -6%;
+  right: -10%;
+}
+.pgsQuickLinks .pgsGrid a {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.pgsQuickLinks .pgsGrid a:after {
+  display: none;
+}
+
+
+/* .pgsHelp Styles */
+.pgsHelp img {
+  height: 6em;
+  margin: 0 2em .8em 1em;
+}
+.pgsHelp div {
+  width: 80%;
+}
+
+
+/* Footer Styles */
+footer {
+  padding: 13px 15px 10px;
+}
+.footLogo {
+  background: #669139 url("../img/refer-foot-icon.png") no-repeat scroll 10px center;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 5px 0 0;
+  padding: 0 13px 0 40px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+.footLogo:hover {
+  background-color: #43671e;
+  color: #fff;
+}
+.footLogo:after {
+  display: none;
+}
+.platform {
+  color: rgba(0,0,0,0.5);
+  font-size: 12px;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer a.appsmav {
+  display: block;
+}
+footer a.appsmav:after {
+  display: none;
+}
+footer a img {
+  display: block;
+  margin: 2px 4px 0 0;
+  max-width: 92px;
+}
+
+
+/* Animation Keyframes */
+@keyframes arrowMoving {
+  0% {opacity: 0; -webkit-transform: translateX(-15px); transform: translateX(-15px)}
+  50% {opacity: 1; -webkit-transform: translateX(0px); transform: translateX(0px)}
+  100% {opacity: 0; -webkit-transform: translateX(15px); transform: translateX(15px)}
+}
+@-webkit-keyframes arrowMoving {
+  0% {opacity: 0; -webkit-transform: translateX(-15px); transform: translateX(-15px)}
+  50% {opacity: 1; -webkit-transform: translateX(0px); transform: translateX(0px)}
+  100% {opacity: 0; -webkit-transform: translateX(15px); transform: translateX(15px)}
+}
+
