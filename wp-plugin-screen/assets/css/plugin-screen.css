@@ -55,7 +55,7 @@ footer {background: #d1d9db;}
 /* GS4 - Global Font Size Setup */
 .pgsContainer {font-size: 20px;}
 @media only screen and (max-width:1380px) { .pgsContainer { font-size: 18px; } }
-@media only screen and (max-width:1100px) { .pgsContainer { font-size: 16px; } }
+@media only screen and (max-width:1180px) { .pgsContainer { font-size: 16px; } }
 @media only screen and (max-width:900px) { .pgsContainer { font-size: 14px; } }
 
 
